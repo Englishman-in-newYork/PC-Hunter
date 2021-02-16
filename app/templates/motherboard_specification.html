@@ -1,2 +1,38 @@
-{% extends "common.html" %}
-{{ product.image }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table class="table">
+
+    <tbody>
+    <tr>
+        <td>Form-factor</td>
+        <td>{{ product.form_factor }}</td>
+    </tr>
+    <tr>
+        <td>Socket</td>
+        <td>{{ product.socket }}</td>
+    </tr>
+    <tr>
+        <td>Chipset</td>
+        <td>{{ product.chipset }}</td>
+    </tr>
+    <tr>
+        <td>Memory type</td>
+        <td>{{ product.memory_type }}</td>
+    </tr>
+    <tr>
+        <td>Memory slots</td>
+        <td>{{ product.memory_slots }}</td>
+    </tr>
+    <tr>
+        <td>Processor support</td>
+        <td>{{ product.processor_support }}</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

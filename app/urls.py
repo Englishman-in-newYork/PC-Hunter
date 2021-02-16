@@ -5,7 +5,7 @@ from app.views import to_main,to_videocards, do_logout, go_to_loggin, do_login, 
     ajax_test, validation, to_components,to_motherboards, ProductDetailViev
 
 urlpatterns = [
-    path("Main", pc_sets),
+    path("Main", pc_sets, name = "Main"),
     path("loggin-check", do_login),
     path("login-page", go_to_loggin),
     path("back", to_main),
