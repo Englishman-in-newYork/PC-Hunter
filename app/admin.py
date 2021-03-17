@@ -25,3 +25,4 @@ admin.site.register(Cart)
 admin.site.register(CartProduct)
 admin.site.register(Customer)
 admin.site.site_url ="/Main"
+admin.site.register(Order)

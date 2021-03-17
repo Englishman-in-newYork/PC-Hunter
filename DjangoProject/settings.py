@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app.apps.AppConfig',
+    "crispy_forms",
 ]
 
 MIDDLEWARE = [
@@ -135,3 +136,5 @@ LANGUAGES = [
     ('en', 'English'),
     ('ru', 'Russian')
 ]
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"
