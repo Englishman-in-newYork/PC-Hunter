@@ -176,4 +176,23 @@ import re
 #print(re.match("^\d+$", "9999") is not None)
 
 
+def waiter(fn):
+    start = datetime.now()
+    print("Wait, it is calculating")
+    def function(*args, **kwargs):
+        result = fn(*args, **kwargs)
+        print("All did calculated", datetime.now() - start)
+    return function
+
+@waiter
+def qube(x):
+    for i in range(x):
+        print(i*i*i)
+
+print(qube(100))
+
+
+
+
+
 

@@ -10,7 +10,9 @@
                             <p></p>
                             <ul class="list-group" style="font-size: 20px; position: absolute; margin-left: 25px">
                                 {% for category in  categories %}
-                                <li style="margin-bottom: 10px"><a href="{{ category.url }}" class="text-dark ">{{ category.name }} ({{ category.count }})</a></li>
+                                    <li style="margin-bottom: 10px"><a href="{{ category.url }}"
+                                                                       class="text-dark ">{{ category.name }}
+                                        ({{ category.count }})</a></li>
                                 {% endfor %}
                             </ul>
                         </div>
@@ -28,12 +30,13 @@
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                             {% for computer in computers %}
-                            <div class="carousel-item active">
-                                <a href="{{ computer.get_absolute_url }}">
-                                    <img class="d-block w-100" src="{{ computer.image.url }}" style="height: 400px"
-                                         alt="Первый слайд">
-                                </a>
-                            </div>
+
+                                <div class="carousel-item {% if forloop.counter == 1 %} active {% endif %}">
+{#                                    <a href="{{ computer.get_absolute_url }}">#}
+                                        <img class="d-block w-100" src="{{ computer.image.url }}" style="height: 400px"
+                                             alt="Первый слайд">
+{#                                    </a>#}
+                                </div>
                             {% endfor %}
                         </div>
                         <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
