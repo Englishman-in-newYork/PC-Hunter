@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from app.models import Computer, VideoCard, Motherboard, Ram, HardDrive, Processor
+from app.models import *
 from django.http import HttpResponse
 import app.templates
 from django.contrib.auth import authenticate, login, logout
@@ -9,8 +9,11 @@ from django.views.generic import DeleteView
 from django.utils.translation import ugettext as _
 
 def pc_sets(request):
-    context = {"Parts": ["Video cards", "Ram's", "Processors", "Main memory", "Motherboards"],
-               "header": "Show all parts", }
+    context = {
+        "Parts": ["Video cards", "Ram's", "Processors", "Main memory", "Motherboards"],
+        "header": "Show all parts",
+        "computers": Computer.objects.all()
+    }
     return render(request, "index.html", context)
 
 
