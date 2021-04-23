@@ -281,8 +281,3 @@ class Order(models.Model):
 
 
 
-class Person(models.Model):
-    name = models.CharField(
-        max_length=20, default=1
-    )
-    age = models.PositiveIntegerField(default=0)

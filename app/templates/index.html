@@ -32,23 +32,21 @@
                             {% for computer in computers %}
 
                                 <div class="carousel-item {% if forloop.counter == 1 %} active {% endif %}">
-{#                                    <a href="{{ computer.get_absolute_url }}">#}
+                                    <a href="{{ computer.get_absolute_url }}">
                                         <img class="d-block w-100" src="{{ computer.image.url }}" style="height: 400px"
                                              alt="Первый слайд">
-{#                                    </a>#}
+                                    </a>
                                 </div>
                             {% endfor %}
                         </div>
-                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
-                           data-slide="prev">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExampleControls" role="button"
-                           data-slide="next">
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
                 </div>
             </div>
